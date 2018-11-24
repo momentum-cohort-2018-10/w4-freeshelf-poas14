@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+    Choose a category - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    {% for book.category in books.category %}
+    <h2>{{ book.category }}</h2>
+    <p>By {{ book.author }}</p>
+    {% endfor %}
+{% endblock content %}

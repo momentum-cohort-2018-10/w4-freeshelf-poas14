@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+    <title>
+        {% block title %}
+            FreeShelf
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <header>
+        <h1>Freeshelf</h1>
+        <h3>A free online library of programming resources</h3>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}{% endblock content %}
+    {% block footer %}{% endblock footer %}
+</body>
+</html>
