@@ -17,7 +17,7 @@ def book_detail(request, slug):
 def choose_category(request):
     books = Book.objects.all()
     return render(request, 'choose_category.html', {
-        'books': "books",
+        'books': books,
     })
 
 # def choose_category(request, book, slug):
