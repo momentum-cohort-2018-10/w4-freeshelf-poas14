@@ -15,3 +15,11 @@ class Book(models.Model):
        if not self.id:
            self.slug = slugify(self.name)
        super(Book, self).save()
+
+    # def get_category(self):
+    #     category = []
+    #     category.append(self.category)
+    #     return category
+
+
+# class Cata(models.Model):

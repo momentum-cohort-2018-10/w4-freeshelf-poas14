@@ -2,10 +2,11 @@
 {% block title %}
     Choose a category - {{ block.super }}
 {% endblock title %}
-
 {% block content %}
-    {% for book.category in books.category %}
-    <h2>{{ book.category }}</h2>
-    <p>By {{ book.author }}</p>
+
+    {% for book in books %}
+    <h2><a href="{% url 'book_detail' slug=book.slug %}">
+        {{ book.category }}
+        </a></h2>
     {% endfor %}
 {% endblock content %}

@@ -10,4 +10,13 @@
         </a></h2>
         <p>{{ book.author }}</p>
     {% endfor %}
+                        
+    {% comment %} {% for category in books %}
+    <a href="{% url 'choose_category' slug=category %}"> 
+    {{ category }}</a>
+    {% endfor %} {% endcomment %}
+
+    {% comment %} <h2><a href="{% url 'choose_category' slug=book.category %}">
+        Categories
+        </a></h2> {% endcomment %}
 {% endblock content %}
